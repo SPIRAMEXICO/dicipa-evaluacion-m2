@@ -414,10 +414,11 @@
 
 				$('#btnCerrar').click(function () {
 					alert('Cierra la ventana para terminar la evaluación...');
+					parent.set('cmi.core.score.raw', puntos);
 					parent.complete();
 					parent.save();
 					parent.end();
-					parent.set('cmi.core.score.raw', puntos);
+
 				});
 
 				$('#btnReintentar').click(function () {
@@ -429,10 +430,10 @@
 						}, 500);
 					} else {
 						alert('Cierra la ventana para terminar la evaluación...');
+						parent.set('cmi.core.score.raw', puntos);
 						parent.complete();
 						parent.save();
 						parent.end();
-						parent.set('cmi.core.score.raw', puntos);
 					}
 				});
 
